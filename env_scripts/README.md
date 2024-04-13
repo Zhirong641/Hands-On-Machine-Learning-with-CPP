@@ -66,26 +66,28 @@ docker run --net=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it -
 
 # Building local development environment
 
-1. Install Ubuntu 18.04
+1. Install Ubuntu 20.04
 
 2. Run the following commands to configure the system:
 ```
+apt-get update
 apt-get install -y build-essential
 apt-get install -y gdb
 apt-get install -y git
 apt-get install -y cmake
 apt-get install -y cmake-curses-gui
 apt-get install -y python
-apt-get install -y python-pip
+apt-get install -y python3
+apt-get install -y python3-pip
 apt-get install -y libblas-dev
 apt-get install -y libopenblas-dev
 apt-get install -y libatlas-base-dev
 apt-get install -y liblapack-dev
 apt-get install -y libboost-all-dev
-apt-get install -y libopencv-core3.2
-apt-get install -y libopencv-imgproc3.2
+apt-get install -y libopencv-core4.2
+apt-get install -y libopencv-imgproc4.2
 apt-get install -q -y libopencv-dev
-apt-get install -y libopencv-highgui3.2
+apt-get install -y libopencv-highgui4.2
 apt-get install -y libopencv-highgui-dev
 apt-get install -y libhdf5-dev
 apt-get install -y libjson-c-dev
@@ -96,8 +98,10 @@ apt-get install -y ninja-build
 apt-get install -y gnuplot
 apt-get install -y vim
 apt-get install -y python3-venv
+update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 pip install pyyaml
-RUN pip install typing
+pip install typing
+
 ```
 
 3. Create build environment with the following commands \(We assume that the path "/path/to/examples/package/" contains extracted code samples package\):

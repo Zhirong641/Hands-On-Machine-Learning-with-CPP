@@ -8,7 +8,7 @@ mkdir libs
 mkdir libs/sources
 
 # Shogun
-. ./install_lib.sh https://github.com/shogun-toolbox/shogun f7255cf2cc6b5116e50840816d70d21e7cc039bb -DBUILD_META_EXAMPLES=OFF -DHAVE_HDF5=ON -DHAVE_PROTOBUF=OFF
+. ./install_lib.sh https://github.com/shogun-toolbox/shogun remotes/origin/bugfix/better-cxx-c-flags -DBUILD_META_EXAMPLES=OFF -DHAVE_HDF5=ON -DHAVE_PROTOBUF=OFF
 
 # SharkML
 . ./install_lib.sh https://github.com/Shark-ML/Shark 221c1f2e8abfffadbf3c5ef7cf324bc6dc9b4315
@@ -17,7 +17,7 @@ mkdir libs/sources
 . ./install_lib.sh https://github.com/davisking/dlib 929c630b381d444bbf5d7aa622e3decc7785ddb2
 
 # Armadillo
-. ./install_lib.sh https://gitlab.com/conradsnicta/armadillo-code 48b45db6ca1d2839e42332dcdf04f55dcec83e20
+. ./install_lib.sh https://gitlab.com/conradsnicta/armadillo-code .
 
 # xtl
 . ./install_lib.sh https://github.com/xtensor-stack/xtl 03a6827c9e402736506f3ded754e890b3ea28a98
@@ -32,13 +32,13 @@ mkdir libs/sources
 . ./install_lib.sh https://github.com/Tencent/rapidjson 73063f5002612c6bf64fe24f851cd5cc0d83eef9
 
 # mlpack
-. ./install_lib.sh https://github.com/mlpack/mlpack e2f696cfd5b7ccda2d3af1c7c728483ea6591718 -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_TESTS=OFF -DDOWNLOAD_ENSMALLEN=ON
+. ./install_lib.sh https://github.com/mlpack/mlpack 51f856515651ac82423e0ca0ed17336cde2328ed -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_TESTS=OFF -DDOWNLOAD_ENSMALLEN=ON
 
 # Eigen
 . ./install_lib.sh https://github.com/eigenteam/eigen-git-mirror cf794d3b741a6278df169e58461f8529f43bce5d
 
 # PyTorch
-. ./install_lib.sh https://github.com/pytorch/pytorch 8554416a199c4cec01c60c7015d8301d2bb39b64 -DBUILD_PYTHON=OFF -DONNX_NAMESPACE=onnx_torch
+. ./install_lib.sh https://github.com/pytorch/pytorch remotes/origin/v1.1.0 -DBUILD_PYTHON=OFF -DONNX_NAMESPACE=onnx_torch
 
 # ONNX
 . ./install_lib.sh https://github.com/onnx/onnx.git 28ca699b69b5a31892619defca2391044a9a6052 -DONNX_NAMESPACE=onnx_torch
